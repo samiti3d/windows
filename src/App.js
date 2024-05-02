@@ -40,6 +40,7 @@ export default function App() {
   useEffect(() => {
     const handleContextmenu = e => {
       e.preventDefault()
+      console.log("you cannot use right click");
     }
     document.addEventListener('contextmenu', handleContextmenu)
     return function cleanup() {
