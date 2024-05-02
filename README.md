@@ -55,3 +55,6 @@ If you like this project and would like to contribute feel free to send a PR or 
 The Windows XP name, artwork, trademark are surely property of Microsoft. This project is provided for educational purposes only. It is not affiliated with and has not been approved by Microsoft.
 ### Credits
 *Thanks to [ShizukuIchi](https://github.com/ShizukuIchi/winXP) for styling refferences and inspiration!*
+### url
+「上原あきな」 “อากินะ อุเอฮาระ”
+https://picb2.com/456/14260?page=1

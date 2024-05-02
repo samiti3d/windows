@@ -64,6 +64,7 @@ const useStyles = createUseStyles({
   },
 });
 export default function StartMenuMain() {
+  const supportLink = "https://github.com/samiti3d";
   const classes = useStyles();
   const [, dispatch] = React.useContext(GlobalContext);
   const handleOpen = (app) => {
@@ -208,7 +209,7 @@ export default function StartMenuMain() {
         </div>
         <div className={classes.item}>
           <a
-            href="https://www.linkedin.com/in/ihor-shalkauskas/"
+            href={supportLink}
             rel="noreferrer"
             target="_blank"
           >
@@ -219,7 +220,7 @@ export default function StartMenuMain() {
         <div className={classes.separator} />
         <div className={classes.item}>
           <a
-            href="https://github.com/shalkauskas/windows"
+            href={supportLink}
             rel="noreferrer"
             target="_blank"
           >

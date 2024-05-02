@@ -104,7 +104,7 @@ export default function Window(props) {
       //   width: maximize ? `100%` : width,
       // }}
       default={{
-        x: 100,
+        x: 300,
         y: 100,
         width: width ? width : `400px`,
         height: height ? height : `400px`,
@@ -129,7 +129,7 @@ export default function Window(props) {
             opacity: state.ActiveApp === app ? 1 : 0.7,
           }}
         >
-          <div className={`${classes.title} title-bar-text`}>
+          <div className={`${classes.title} title-bar-text flex flex-row gap-x-1`}>
             {icon && <img src={icon} alt="icon" width="15px" />}
             {windowTitle}
           </div>

@@ -48,7 +48,7 @@ export default function MyComputerApp() {
       <div className={classes.myComputer}>
         <SideBar />
         <div className={classes.main}>
-          <div className={classes.mainHeader}>
+          {/* <div className={classes.mainHeader}>
             <span>Check out these places too!</span>
           </div>
           <div className={classes.headerSeparator} />
@@ -71,7 +71,7 @@ export default function MyComputerApp() {
               inside
               link="https://shalkauskas.com/"
             />
-          </div>
+          </div> */}
           <div className={classes.mainHeader}>
             <span>Hard Disc Drives</span>
           </div>

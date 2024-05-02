@@ -1,3 +1,4 @@
+
 export const initialState = {
   MyComputer: {
     appOpen: false,
@@ -16,7 +17,6 @@ export const initialState = {
   ToDoApp: { appOpen: false },
   Weather: {
     appOpen: false,
-
     result: {},
     submitted: false,
     units: `imperial`,
@@ -24,6 +24,7 @@ export const initialState = {
   Paint: { appOpen: false },
   WindowsMediaPlayer: { appOpen: false },
   CommandLine: { appOpen: false },
+  Janken: { appOpen: false },
   ActiveApp: ``,
   StatusBar: [],
   StartMenu: { open: false },
@@ -93,6 +94,14 @@ export const reduce = (state, action) => {
           result: action.payload.result,
           units: action.payload.units,
         },
+      };
+    case 'Janken':
+      return {
+        ...state,
+        Janken: {
+          ...state.Janken,
+          appOpen: action.payload,
+        }
       };
     case 'Paint':
       return {

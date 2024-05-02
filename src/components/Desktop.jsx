@@ -6,6 +6,7 @@ import ToDoIcon from '../media/todoapp.png';
 import weatherIcon from '../media/weather-icon.png';
 import paint from '../media/paint.png';
 import notepad from '../media/notepad.png';
+import flash from '../media/flashplayer.png';
 export default function Desktop() {
   return (
     <div style={{ position: 'absolute' }}>
@@ -23,6 +24,7 @@ export default function Desktop() {
       <AppItem icon={weatherIcon} name="Weather" app="Weather" />
       <AppItem icon={paint} name="Paint" app="Paint" />
       <AppItem icon={notepad} name="Notepad" app="Notepad" />
+      <AppItem icon={flash} name="Janken" app="Janken" />
     </div>
   );
 }

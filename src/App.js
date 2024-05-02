@@ -1,4 +1,5 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect } from 'react';
+
 import './App.css';
 import 'xp.css/dist/XP.css';
 import { createUseStyles } from 'react-jss';
@@ -15,6 +16,7 @@ import Notepad from './components/Apps/Notepad';
 import CommandLine from './components/Apps/CommandLine';
 import background from './media/xp-background.jpg';
 import Error from './components/Error';
+import Janken from './components/Apps/Janken.jsx';
 const useStyles = createUseStyles({
   app: {
     backgroundImage: `url("${background}")`,
@@ -22,6 +24,10 @@ const useStyles = createUseStyles({
     backgroundSize: `cover`,
     fontFamily: `Tahoma, 'Noto Sans', sans-serif`,
     overflow: `hidden`,
+    width: '100%',
+    // width: `1024px`,
+    // height: `768px`,
+    margin: `0 auto`,
   },
 });
 export const GlobalContext = createContext();
@@ -31,9 +37,19 @@ export default function App() {
   // console.log(state.StatusBar);
   // console.log(state.ActiveApp);
 
+  useEffect(() => {
+    const handleContextmenu = e => {
+      e.preventDefault()
+    }
+    document.addEventListener('contextmenu', handleContextmenu)
+    return function cleanup() {
+      document.removeEventListener('contextmenu', handleContextmenu)
+    }
+  }, [])
+
   return (
     <GlobalContext.Provider value={[state, dispatch]}>
-      <div id="app" className={classes.app}>
+      <div id="app" className={`${classes.app} relative`}>
         <Desktop />
         <div
           style={{
@@ -44,18 +60,18 @@ export default function App() {
           }}
         >
           {state.MyComputer.appOpen && <MyComputerApp />}
-
           {state.InternetExplorer.appOpen && <InternetExplorerApp />}
           {state.ToDoApp.appOpen && <ToDoApp />}
           {state.Weather.appOpen && <WeatherApp />}
           {state.Paint.appOpen && <Paint />}
+          {state.Janken.appOpen && <Janken />}
           {state.WindowsMediaPlayer.appOpen && <WindowsMediaPlayer />}
           {state.Notepad.appOpen && <Notepad />}
           {state.CommandLine.appOpen && <CommandLine />}
           {state.Error.appOpen && <Error />}
         </div>
 
-        <Footer />
+        <Footer className="absolute top-0 lef" />
       </div>
     </GlobalContext.Provider>
   );

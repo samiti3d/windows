@@ -2,6 +2,9 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 import Item from './DropDownMenuItem';
 import check from '../../media/check.png';
+
+const supportLink = "https://github.com/samiti3d";
+
 const useStyles = createUseStyles({
   dropdown: {
     margin: `0 3px`,
@@ -213,7 +216,7 @@ export default function DropdownMenu(props) {
           >
             <Item>
               <a
-                href="https://github.com/shalkauskas/windows"
+                href={supportLink}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -223,7 +226,7 @@ export default function DropdownMenu(props) {
             <div className={classes.separator} />
             <Item>
               <a
-                href="https://github.com/shalkauskas/windows"
+                href={supportLink}
                 rel="noreferrer"
                 target="_blank"
               >
@@ -232,7 +235,7 @@ export default function DropdownMenu(props) {
             </Item>
             <Item>
               <a
-                href="https://github.com/shalkauskas/windows"
+                href={supportLink}
                 rel="noreferrer"
                 target="_blank"
               >
